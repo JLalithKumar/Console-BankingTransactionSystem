@@ -52,20 +52,12 @@ Validation logic is handled separately from database operations to keep the desi
 ## Console Menu
 
 1. Create Customer
-
 2. Open Account
-
 3. Deposit
-
 4. Withdraw
-
 5. Transfer
-
 6. Check Balance
-
 7. Exit
-
-
 
 ---
 
