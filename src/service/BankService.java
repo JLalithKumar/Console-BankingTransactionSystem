@@ -15,7 +15,7 @@ public class BankService {
 
         try (Connection con = DBConnection.getConnection()) {
 
-            con.setAutoCommit(false); // START TRANSACTION
+            con.setAutoCommit(false);
 
             boolean withdrawn =
                     accountDAO.withdraw(fromAcc, amount, con);
@@ -38,10 +38,10 @@ public class BankService {
             System.out.println("Transfer successful!");
 
         } catch (RuntimeException e) {
-            System.out.println(e.getMessage()); // clean user message
+            System.out.println(e.getMessage());
         } catch (Exception e) {
             System.out.println("Transfer failed due to system error.");
-            e.printStackTrace(); // keep for unexpected errors
+            e.printStackTrace();
         }
     }
 }
