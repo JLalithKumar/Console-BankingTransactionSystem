@@ -25,7 +25,7 @@ public class CustomerDAO {
 
             ResultSet rs = ps.getGeneratedKeys();
             if (rs.next()) {
-                return rs.getInt(1); // customer_id
+                return rs.getInt(1);
             }
 
         } catch (Exception e) {
