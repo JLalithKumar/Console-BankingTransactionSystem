@@ -7,10 +7,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 public class AccountDAO {
-
-    // =========================
-    // OPEN ACCOUNT (NON-TRANSACTIONAL)
-    // =========================
     public String openAccount(int customerId, double initialBalance) {
 
         String accountNumber = generateAccountNumber();
@@ -35,17 +31,11 @@ public class AccountDAO {
         return null;
     }
 
-    // =========================
-    // GENERATE PUBLIC ACCOUNT NUMBER
-    // =========================
     private String generateAccountNumber() {
         int random = (int) (Math.random() * 900000) + 100000;
         return "BANK2026" + random;
     }
 
-    // =========================
-    // GET BALANCE (TRANSACTION-AWARE)
-    // =========================
     public double getBalance(String accountNumber, Connection con) {
 
         String sql =
@@ -64,9 +54,6 @@ public class AccountDAO {
         return -1;
     }
 
-    // =========================
-    // DEPOSIT (TRANSACTION-AWARE)
-    // =========================
     public boolean deposit(String accountNumber, double amount, Connection con) {
 
         String sql =
@@ -83,9 +70,6 @@ public class AccountDAO {
         return false;
     }
 
-    // =========================
-    // WITHDRAW (TRANSACTION-AWARE)
-    // =========================
     public boolean withdraw(String accountNumber, double amount, Connection con) {
 
         String sql =
