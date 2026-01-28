@@ -36,7 +36,7 @@ public class Main {
 
                     case 1 -> {
                         System.out.print("Name: ");
-                        sc.nextLine(); // consume newline
+                        sc.nextLine();
                         String name = sc.nextLine();
 
                         System.out.print("Phone: ");
