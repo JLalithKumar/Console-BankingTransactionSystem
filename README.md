@@ -39,16 +39,6 @@ This prevents partial updates and ensures balances remain consistent.
 
 ---
 
-## Validation
-
-Basic validation is performed before storing customer data:
-- Phone number must contain exactly 10 digits
-- Email must follow a valid format
-
-Validation logic is handled separately from database operations to keep the design clean.
-
----
-
 ## Console Menu
 
 1. Create Customer
